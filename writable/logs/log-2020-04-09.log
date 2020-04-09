@@ -1,0 +1,163 @@
+CRITICAL - 2020-04-09 04:17:16 --> Call to undefined function set_value()
+#0 H:\xampp\htdocs\ci4\login\vendor\codeigniter4\framework\system\View\View.php(236): include()
+#1 H:\xampp\htdocs\ci4\login\vendor\codeigniter4\framework\system\Common.php(1071): CodeIgniter\View\View->render('login', Array, true)
+#2 H:\xampp\htdocs\ci4\login\app\Controllers\Users.php(10): view('login', Array)
+#3 H:\xampp\htdocs\ci4\login\vendor\codeigniter4\framework\system\CodeIgniter.php(910): App\Controllers\Users->index()
+#4 H:\xampp\htdocs\ci4\login\vendor\codeigniter4\framework\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#5 H:\xampp\htdocs\ci4\login\vendor\codeigniter4\framework\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 H:\xampp\htdocs\ci4\login\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2020-04-09 04:30:59 --> Invalid file: {0}
+#0 H:\xampp\htdocs\ci4\login\vendor\codeigniter4\framework\system\View\View.php(224): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('regsiter.php')
+#1 H:\xampp\htdocs\ci4\login\vendor\codeigniter4\framework\system\Common.php(1071): CodeIgniter\View\View->render('regsiter', Array, true)
+#2 H:\xampp\htdocs\ci4\login\app\Controllers\Users.php(22): view('regsiter')
+#3 H:\xampp\htdocs\ci4\login\vendor\codeigniter4\framework\system\CodeIgniter.php(910): App\Controllers\Users->register()
+#4 H:\xampp\htdocs\ci4\login\vendor\codeigniter4\framework\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#5 H:\xampp\htdocs\ci4\login\vendor\codeigniter4\framework\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 H:\xampp\htdocs\ci4\login\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2020-04-09 05:03:44 --> Class 'Codeigniter\Model' not found
+#0 H:\xampp\htdocs\ci4\login\vendor\codeigniter4\framework\system\Autoloader\Autoloader.php(365): require_once()
+#1 H:\xampp\htdocs\ci4\login\vendor\codeigniter4\framework\system\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->requireFile('H:\\xampp\\htdocs...')
+#2 H:\xampp\htdocs\ci4\login\vendor\codeigniter4\framework\system\Autoloader\Autoloader.php(258): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Models\\User...')
+#3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Models\\User...')
+#4 H:\xampp\htdocs\ci4\login\app\Controllers\Users.php(36): spl_autoload_call('App\\Models\\User...')
+#5 H:\xampp\htdocs\ci4\login\vendor\codeigniter4\framework\system\CodeIgniter.php(910): App\Controllers\Users->register()
+#6 H:\xampp\htdocs\ci4\login\vendor\codeigniter4\framework\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#7 H:\xampp\htdocs\ci4\login\vendor\codeigniter4\framework\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 H:\xampp\htdocs\ci4\login\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2020-04-09 05:04:18 --> Undefined variable: newData
+#0 H:\xampp\htdocs\ci4\login\app\Controllers\Users.php(44): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'H:\\xampp\\htdocs...', 44, Array)
+#1 H:\xampp\htdocs\ci4\login\vendor\codeigniter4\framework\system\CodeIgniter.php(910): App\Controllers\Users->register()
+#2 H:\xampp\htdocs\ci4\login\vendor\codeigniter4\framework\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#3 H:\xampp\htdocs\ci4\login\vendor\codeigniter4\framework\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 H:\xampp\htdocs\ci4\login\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2020-04-09 05:06:11 --> password_hash() expects at least 2 parameters, 1 given
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'password_hash()...', 'H:\\xampp\\htdocs...', 28, Array)
+#1 H:\xampp\htdocs\ci4\login\app\Models\UserModel.php(28): password_hash('Pa$$w0rd!2y')
+#2 H:\xampp\htdocs\ci4\login\app\Models\UserModel.php(15): App\Models\UserModel->passwordHash(Array)
+#3 H:\xampp\htdocs\ci4\login\vendor\codeigniter4\framework\system\Model.php(1619): App\Models\UserModel->beforeInsert(Array)
+#4 H:\xampp\htdocs\ci4\login\vendor\codeigniter4\framework\system\Model.php(717): CodeIgniter\Model->trigger('beforeInsert', Array)
+#5 H:\xampp\htdocs\ci4\login\vendor\codeigniter4\framework\system\Model.php(550): CodeIgniter\Model->insert(Array, false)
+#6 H:\xampp\htdocs\ci4\login\app\Controllers\Users.php(44): CodeIgniter\Model->save(Array)
+#7 H:\xampp\htdocs\ci4\login\vendor\codeigniter4\framework\system\CodeIgniter.php(910): App\Controllers\Users->register()
+#8 H:\xampp\htdocs\ci4\login\vendor\codeigniter4\framework\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#9 H:\xampp\htdocs\ci4\login\vendor\codeigniter4\framework\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 H:\xampp\htdocs\ci4\login\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2020-04-09 05:52:04 --> Call to a member function first() on null
+#0 H:\xampp\htdocs\ci4\login\vendor\codeigniter4\framework\system\CodeIgniter.php(910): App\Controllers\Users->index()
+#1 H:\xampp\htdocs\ci4\login\vendor\codeigniter4\framework\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#2 H:\xampp\htdocs\ci4\login\vendor\codeigniter4\framework\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 H:\xampp\htdocs\ci4\login\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2020-04-09 05:53:55 --> Call to a member function first() on null
+#0 H:\xampp\htdocs\ci4\login\vendor\codeigniter4\framework\system\CodeIgniter.php(910): App\Controllers\Users->index()
+#1 H:\xampp\htdocs\ci4\login\vendor\codeigniter4\framework\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#2 H:\xampp\htdocs\ci4\login\vendor\codeigniter4\framework\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 H:\xampp\htdocs\ci4\login\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2020-04-09 05:54:18 --> Call to a member function findAll() on null
+#0 H:\xampp\htdocs\ci4\login\vendor\codeigniter4\framework\system\CodeIgniter.php(910): App\Controllers\Users->index()
+#1 H:\xampp\htdocs\ci4\login\vendor\codeigniter4\framework\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#2 H:\xampp\htdocs\ci4\login\vendor\codeigniter4\framework\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 H:\xampp\htdocs\ci4\login\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2020-04-09 05:56:21 --> Call to a member function first() on null
+#0 H:\xampp\htdocs\ci4\login\vendor\codeigniter4\framework\system\CodeIgniter.php(910): App\Controllers\Users->index()
+#1 H:\xampp\htdocs\ci4\login\vendor\codeigniter4\framework\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#2 H:\xampp\htdocs\ci4\login\vendor\codeigniter4\framework\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 H:\xampp\htdocs\ci4\login\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2020-04-09 05:59:47 --> Call to undefined method App\Controllers\Users::setUserData()
+#0 H:\xampp\htdocs\ci4\login\vendor\codeigniter4\framework\system\CodeIgniter.php(910): App\Controllers\Users->index()
+#1 H:\xampp\htdocs\ci4\login\vendor\codeigniter4\framework\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#2 H:\xampp\htdocs\ci4\login\vendor\codeigniter4\framework\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 H:\xampp\htdocs\ci4\login\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2020-04-09 06:02:31 --> Undefined property: App\Controllers\Users::$session
+#0 H:\xampp\htdocs\ci4\login\app\Controllers\Users.php(35): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'H:\\xampp\\htdocs...', 35, Array)
+#1 H:\xampp\htdocs\ci4\login\vendor\codeigniter4\framework\system\CodeIgniter.php(910): App\Controllers\Users->index()
+#2 H:\xampp\htdocs\ci4\login\vendor\codeigniter4\framework\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#3 H:\xampp\htdocs\ci4\login\vendor\codeigniter4\framework\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 H:\xampp\htdocs\ci4\login\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2020-04-09 06:24:29 --> Undefined variable: session
+#0 H:\xampp\htdocs\ci4\login\app\Controllers\Users.php(131): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'H:\\xampp\\htdocs...', 131, Array)
+#1 H:\xampp\htdocs\ci4\login\vendor\codeigniter4\framework\system\CodeIgniter.php(910): App\Controllers\Users->profile()
+#2 H:\xampp\htdocs\ci4\login\vendor\codeigniter4\framework\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#3 H:\xampp\htdocs\ci4\login\vendor\codeigniter4\framework\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 H:\xampp\htdocs\ci4\login\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2020-04-09 06:46:48 --> Trying to access array offset on value of type null
+#0 H:\xampp\htdocs\ci4\login\app\Views\profile.php(5): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to acces...', 'H:\\xampp\\htdocs...', 5, Array)
+#1 H:\xampp\htdocs\ci4\login\vendor\codeigniter4\framework\system\View\View.php(236): include('H:\\xampp\\htdocs...')
+#2 H:\xampp\htdocs\ci4\login\vendor\codeigniter4\framework\system\Common.php(1071): CodeIgniter\View\View->render('profile', Array, true)
+#3 H:\xampp\htdocs\ci4\login\app\Controllers\Users.php(139): view('profile')
+#4 H:\xampp\htdocs\ci4\login\vendor\codeigniter4\framework\system\CodeIgniter.php(910): App\Controllers\Users->profile()
+#5 H:\xampp\htdocs\ci4\login\vendor\codeigniter4\framework\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#6 H:\xampp\htdocs\ci4\login\vendor\codeigniter4\framework\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 H:\xampp\htdocs\ci4\login\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2020-04-09 07:11:23 --> Trying to access array offset on value of type null
+#0 H:\xampp\htdocs\ci4\login\app\Views\profile.php(5): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to acces...', 'H:\\xampp\\htdocs...', 5, Array)
+#1 H:\xampp\htdocs\ci4\login\vendor\codeigniter4\framework\system\View\View.php(236): include('H:\\xampp\\htdocs...')
+#2 H:\xampp\htdocs\ci4\login\vendor\codeigniter4\framework\system\Common.php(1071): CodeIgniter\View\View->render('profile', Array, true)
+#3 H:\xampp\htdocs\ci4\login\app\Controllers\Users.php(140): view('profile')
+#4 H:\xampp\htdocs\ci4\login\vendor\codeigniter4\framework\system\CodeIgniter.php(910): App\Controllers\Users->profile()
+#5 H:\xampp\htdocs\ci4\login\vendor\codeigniter4\framework\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#6 H:\xampp\htdocs\ci4\login\vendor\codeigniter4\framework\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 H:\xampp\htdocs\ci4\login\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2020-04-09 07:16:44 --> Trying to access array offset on value of type null
+#0 H:\xampp\htdocs\ci4\login\app\Views\profile.php(5): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to acces...', 'H:\\xampp\\htdocs...', 5, Array)
+#1 H:\xampp\htdocs\ci4\login\vendor\codeigniter4\framework\system\View\View.php(236): include('H:\\xampp\\htdocs...')
+#2 H:\xampp\htdocs\ci4\login\vendor\codeigniter4\framework\system\Common.php(1071): CodeIgniter\View\View->render('profile', Array, true)
+#3 H:\xampp\htdocs\ci4\login\app\Controllers\Users.php(140): view('profile')
+#4 H:\xampp\htdocs\ci4\login\vendor\codeigniter4\framework\system\CodeIgniter.php(910): App\Controllers\Users->profile()
+#5 H:\xampp\htdocs\ci4\login\vendor\codeigniter4\framework\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#6 H:\xampp\htdocs\ci4\login\vendor\codeigniter4\framework\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 H:\xampp\htdocs\ci4\login\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2020-04-09 07:19:13 --> Trying to access array offset on value of type null
+#0 H:\xampp\htdocs\ci4\login\app\Views\profile.php(5): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to acces...', 'H:\\xampp\\htdocs...', 5, Array)
+#1 H:\xampp\htdocs\ci4\login\vendor\codeigniter4\framework\system\View\View.php(236): include('H:\\xampp\\htdocs...')
+#2 H:\xampp\htdocs\ci4\login\vendor\codeigniter4\framework\system\Common.php(1071): CodeIgniter\View\View->render('profile', Array, true)
+#3 H:\xampp\htdocs\ci4\login\app\Controllers\Users.php(140): view('profile')
+#4 H:\xampp\htdocs\ci4\login\vendor\codeigniter4\framework\system\CodeIgniter.php(910): App\Controllers\Users->profile()
+#5 H:\xampp\htdocs\ci4\login\vendor\codeigniter4\framework\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#6 H:\xampp\htdocs\ci4\login\vendor\codeigniter4\framework\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 H:\xampp\htdocs\ci4\login\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2020-04-09 07:26:24 --> Trying to access array offset on value of type null
+#0 H:\xampp\htdocs\ci4\login\app\Views\profile.php(5): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to acces...', 'H:\\xampp\\htdocs...', 5, Array)
+#1 H:\xampp\htdocs\ci4\login\vendor\codeigniter4\framework\system\View\View.php(236): include('H:\\xampp\\htdocs...')
+#2 H:\xampp\htdocs\ci4\login\vendor\codeigniter4\framework\system\Common.php(1071): CodeIgniter\View\View->render('profile', Array, true)
+#3 H:\xampp\htdocs\ci4\login\app\Controllers\Users.php(140): view('profile')
+#4 H:\xampp\htdocs\ci4\login\vendor\codeigniter4\framework\system\CodeIgniter.php(910): App\Controllers\Users->profile()
+#5 H:\xampp\htdocs\ci4\login\vendor\codeigniter4\framework\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#6 H:\xampp\htdocs\ci4\login\vendor\codeigniter4\framework\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 H:\xampp\htdocs\ci4\login\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2020-04-09 07:28:00 --> Trying to access array offset on value of type null
+#0 H:\xampp\htdocs\ci4\login\app\Views\profile.php(5): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to acces...', 'H:\\xampp\\htdocs...', 5, Array)
+#1 H:\xampp\htdocs\ci4\login\vendor\codeigniter4\framework\system\View\View.php(236): include('H:\\xampp\\htdocs...')
+#2 H:\xampp\htdocs\ci4\login\vendor\codeigniter4\framework\system\Common.php(1071): CodeIgniter\View\View->render('profile', Array, true)
+#3 H:\xampp\htdocs\ci4\login\app\Controllers\Users.php(140): view('profile')
+#4 H:\xampp\htdocs\ci4\login\vendor\codeigniter4\framework\system\CodeIgniter.php(910): App\Controllers\Users->profile()
+#5 H:\xampp\htdocs\ci4\login\vendor\codeigniter4\framework\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#6 H:\xampp\htdocs\ci4\login\vendor\codeigniter4\framework\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 H:\xampp\htdocs\ci4\login\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2020-04-09 07:28:13 --> Trying to access array offset on value of type null
+#0 H:\xampp\htdocs\ci4\login\app\Views\profile.php(5): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to acces...', 'H:\\xampp\\htdocs...', 5, Array)
+#1 H:\xampp\htdocs\ci4\login\vendor\codeigniter4\framework\system\View\View.php(236): include('H:\\xampp\\htdocs...')
+#2 H:\xampp\htdocs\ci4\login\vendor\codeigniter4\framework\system\Common.php(1071): CodeIgniter\View\View->render('profile', Array, true)
+#3 H:\xampp\htdocs\ci4\login\app\Controllers\Users.php(140): view('profile')
+#4 H:\xampp\htdocs\ci4\login\vendor\codeigniter4\framework\system\CodeIgniter.php(910): App\Controllers\Users->profile()
+#5 H:\xampp\htdocs\ci4\login\vendor\codeigniter4\framework\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#6 H:\xampp\htdocs\ci4\login\vendor\codeigniter4\framework\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 H:\xampp\htdocs\ci4\login\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
