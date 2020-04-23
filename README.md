@@ -6,5 +6,6 @@ Change .env settings to apply to your environment
 
 ## Run migration
 Open terminal and navigate to your project folder, then run:
-> php spark migrate
+> php spark migrate 
+
 This will create the table 'users' in your database that you secified in your .env file
