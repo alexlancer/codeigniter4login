@@ -9,3 +9,5 @@ Open terminal and navigate to your project folder, then run:
 > php spark migrate 
 
 This will create the table 'users' in your database that you secified in your .env file
+
+## Now you can Register your first
