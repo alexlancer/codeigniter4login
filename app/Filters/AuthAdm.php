@@ -4,7 +4,7 @@ use CodeIgniter\HTTP\RequestInterface;
 use CodeIgniter\HTTP\ResponseInterface;
 use CodeIgniter\Filters\FilterInterface;
 
-class AuthAdm implements FilterInterface
+class AuthAdm implements FilterInterface // filtre qui permet de rediriger un utilisateur qui n'a pas les droits
 {
     public function before(RequestInterface $request)
     {

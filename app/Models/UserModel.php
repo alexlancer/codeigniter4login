@@ -26,7 +26,7 @@ class UserModel extends Model{
 
   protected function passwordHash(array $data){
     if(isset($data['data']['password']))
-      $data['data']['password'] = password_hash($data['data']['password'], PASSWORD_DEFAULT);
+      $data['data']['password'] = password_hash($data['data']['password'], PASSWORD_DEFAULT); // Cryptage Bcrypt du mdp
 
     return $data;
   }

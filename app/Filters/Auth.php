@@ -4,7 +4,7 @@ use CodeIgniter\HTTP\RequestInterface;
 use CodeIgniter\HTTP\ResponseInterface;
 use CodeIgniter\Filters\FilterInterface;
 
-class Auth implements FilterInterface
+class Auth implements FilterInterface // filtre qui permet de rediriger un utilisateur qui n'est pas logger
 {
     public function before(RequestInterface $request)
     {

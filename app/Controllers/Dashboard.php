@@ -1,5 +1,5 @@
 <?php namespace App\Controllers;
-
+/* Header et footer*/
 class Dashboard extends BaseController
 {
 	public function index()
