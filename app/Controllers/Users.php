@@ -50,6 +50,7 @@ class Users extends BaseController
 			'firstname' => $user['firstname'],
 			'lastname' => $user['lastname'],
 			'email' => $user['email'],
+            'droits' => $user['droits'],
 			'isLoggedIn' => true,
 		];
 
@@ -95,6 +96,8 @@ class Users extends BaseController
 		echo view('register');
 		echo view('templates/footer');
 	}
+
+
 
 	public function profile(){
 		
