@@ -63,7 +63,7 @@ class Users extends BaseController /*Déclaration de classe qui hérite du contr
 		helper(['form']);
 
 		if ($this->request->getMethod() == 'post') {
-			//let's do the validation here
+
 			$rules = [ //règles
 				'firstname' => 'required|min_length[3]|max_length[20]',
 				'lastname' => 'required|min_length[3]|max_length[20]',
@@ -83,9 +83,9 @@ class Users extends BaseController /*Déclaration de classe qui hérite du contr
 					'email' => $this->request->getVar('email'),
 					'password' => $this->request->getVar('password'),
 				];
-				$model->save($newData);
+				$model->save($newData); // INSERT
 				$session = session();
-				$session->setFlashdata('success', 'Successful Registration');
+				$session->setFlashdata('success', 'Inscription validée');
 				return redirect()->to('/');
 
 			}
@@ -106,7 +106,7 @@ class Users extends BaseController /*Déclaration de classe qui hérite du contr
 		$model = new UserModel();
 
 		if ($this->request->getMethod() == 'post') {
-			//let's do the validation here
+
 			$rules = [
 				'firstname' => 'required|min_length[3]|max_length[20]',
 				'lastname' => 'required|min_length[3]|max_length[20]',
@@ -132,7 +132,7 @@ class Users extends BaseController /*Déclaration de classe qui hérite du contr
 					}
 				$model->save($newData);
 
-				session()->setFlashdata('success', 'Successfuly Updated');
+				session()->setFlashdata('success', 'Mise à jour réuissie ');
 				return redirect()->to('/profile');
 
 			}

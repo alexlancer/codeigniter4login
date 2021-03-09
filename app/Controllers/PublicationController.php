@@ -15,7 +15,6 @@ class PublicationController extends BaseController /*Déclaration de classe qui 
         helper(['form']);
 
         if ($this->request->getMethod() == 'post') { /* méthode post pour masqué les infos */
-            //let's do the validation here
             $rules = [
                 'hashtag' => 'required|min_length[1]|max_length[255]',    /* règle de longueur des info  */
                 'description' => 'required|min_length[1]|max_length[255]',
