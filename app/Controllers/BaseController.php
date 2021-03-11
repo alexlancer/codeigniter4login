@@ -13,7 +13,7 @@ namespace App\Controllers;
  *
  * @package CodeIgniter
  */
-
+/* Controlleur de base de CI*/
 use CodeIgniter\Controller;
 
 class BaseController extends Controller

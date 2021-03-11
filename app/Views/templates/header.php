@@ -13,7 +13,7 @@
      ?>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
       <div class="container">
-      <a class="navbar-brand" href="/">Ci4 Login</a>
+      <a class="navbar-brand" href="/">(Re)sources Relationnelles</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -21,24 +21,38 @@
       <?php if (session()->get('isLoggedIn')): ?>
         <ul class="navbar-nav mr-auto">
           <li class="nav-item <?= ($uri->getSegment(1) == 'dashboard' ? 'active' : null) ?>">
-            <a class="nav-link"  href="/dashboard">Dashboard</a>
+            <a class="nav-link"  href="/dashboard">Accueil</a>
           </li>
           <li class="nav-item <?= ($uri->getSegment(1) == 'profile' ? 'active' : null) ?>">
-            <a class="nav-link" href="/profile">Profile</a>
+            <a class="nav-link" href="/profile">Profil</a>
           </li>
+            <li class="nav-item <?= ($uri->getSegment(1) == 'publication' ? 'active' : null) ?>">
+                <a class="nav-link" href="/publication">Créer Publication</a>
+            </li>
+            <li class="nav-item <?= ($uri->getSegment(1) == 'publication' ? 'active' : null) ?>">
+                <a class="nav-link" href="/displayPublication">Publication</a>
+            </li>
+            <li class="nav-item <?= ($uri->getSegment(1) == 'publication' ? 'active' : null) ?>">
+                <a class="nav-link" href="/userpublication">Mes Publications</a>
+            </li>
+            <?php if (session()->get('droits') > 1): ?>
+            <li class="nav-item <?= ($uri->getSegment(1) == 'publication' ? 'active' : null) ?>">
+                <a class="nav-link" href="/unverifiedpublication">Publication non approuvée</a>
+                <?php endif; ?>
         </ul>
+
         <ul class="navbar-nav my-2 my-lg-0">
           <li class="nav-item">
-            <a class="nav-link" href="/logout">Logout</a>
+            <a class="nav-link" href="/logout">Déconnexion</a>
           </li>
         </ul>
       <?php else: ?>
         <ul class="navbar-nav mr-auto">
           <li class="nav-item <?= ($uri->getSegment(1) == '' ? 'active' : null) ?>">
-            <a class="nav-link" href="/">Login</a>
+            <a class="nav-link" href="/">Se connecter</a>
           </li>
           <li class="nav-item <?= ($uri->getSegment(1) == 'register' ? 'active' : null) ?>">
-            <a class="nav-link" href="/register">Register</a>
+            <a class="nav-link" href="/register">Crée un compte</a>
           </li>
         </ul>
         <?php endif; ?>

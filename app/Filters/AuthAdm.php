@@ -4,13 +4,13 @@ use CodeIgniter\HTTP\RequestInterface;
 use CodeIgniter\HTTP\ResponseInterface;
 use CodeIgniter\Filters\FilterInterface;
 
-class Noauth implements FilterInterface // filtre qui permet de rediriger un utilisateur qui est  logger
+class AuthAdm implements FilterInterface // filtre qui permet de rediriger un utilisateur qui n'a pas les droits
 {
     public function before(RequestInterface $request)
     {
         // Do something here
-        if(session()->get('isLoggedIn')){
-          return redirect()->to('/dashboard');
+        if(session()->get('droits') < 2 ){
+            return redirect()->to('/');
         }
 
     }

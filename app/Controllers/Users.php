@@ -3,7 +3,7 @@
 use App\Models\UserModel;
 
 
-class Users extends BaseController
+class Users extends BaseController /*Déclaration de classe qui hérite du controlleur de base de CI*/
 {
 	public function index()
 	{
@@ -12,7 +12,7 @@ class Users extends BaseController
 
 
 		if ($this->request->getMethod() == 'post') {
-			//let's do the validation here
+
 			$rules = [
 				'email' => 'required|min_length[6]|max_length[50]|valid_email',
 				'password' => 'required|min_length[8]|max_length[255]|validateUser[email,password]',
@@ -20,7 +20,7 @@ class Users extends BaseController
 
 			$errors = [
 				'password' => [
-					'validateUser' => 'Email or Password don\'t match'
+					'validateUser' => 'Informations erronées '
 				]
 			];
 
@@ -44,12 +44,13 @@ class Users extends BaseController
 		echo view('templates/footer');
 	}
 
-	private function setUserSession($user){
+	private function setUserSession($user){  // u recupère les infos de l'user à la connexion
 		$data = [
 			'id' => $user['id'],
 			'firstname' => $user['firstname'],
 			'lastname' => $user['lastname'],
 			'email' => $user['email'],
+            'droits' => $user['droits'],
 			'isLoggedIn' => true,
 		];
 
@@ -57,13 +58,13 @@ class Users extends BaseController
 		return true;
 	}
 
-	public function register(){
+	public function register(){ //inscription
 		$data = [];
 		helper(['form']);
 
 		if ($this->request->getMethod() == 'post') {
-			//let's do the validation here
-			$rules = [
+
+			$rules = [ //règles
 				'firstname' => 'required|min_length[3]|max_length[20]',
 				'lastname' => 'required|min_length[3]|max_length[20]',
 				'email' => 'required|min_length[6]|max_length[50]|valid_email|is_unique[users.email]',
@@ -82,9 +83,9 @@ class Users extends BaseController
 					'email' => $this->request->getVar('email'),
 					'password' => $this->request->getVar('password'),
 				];
-				$model->save($newData);
+				$model->save($newData); // INSERT
 				$session = session();
-				$session->setFlashdata('success', 'Successful Registration');
+				$session->setFlashdata('success', 'Inscription validée');
 				return redirect()->to('/');
 
 			}
@@ -96,6 +97,8 @@ class Users extends BaseController
 		echo view('templates/footer');
 	}
 
+
+
 	public function profile(){
 		
 		$data = [];
@@ -103,7 +106,7 @@ class Users extends BaseController
 		$model = new UserModel();
 
 		if ($this->request->getMethod() == 'post') {
-			//let's do the validation here
+
 			$rules = [
 				'firstname' => 'required|min_length[3]|max_length[20]',
 				'lastname' => 'required|min_length[3]|max_length[20]',
@@ -129,7 +132,7 @@ class Users extends BaseController
 					}
 				$model->save($newData);
 
-				session()->setFlashdata('success', 'Successfuly Updated');
+				session()->setFlashdata('success', 'Mise à jour réuissie ');
 				return redirect()->to('/profile');
 
 			}
@@ -142,8 +145,8 @@ class Users extends BaseController
 	}
 
 	public function logout(){
-		session()->destroy();
-		return redirect()->to('/');
+		session()->destroy(); // met fin à la session
+		return redirect()->to('/'); //redirection vers la racine
 	}
 
 	//--------------------------------------------------------------------

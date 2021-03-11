@@ -34,7 +34,15 @@ $routes->get('/', 'Users::index', ['filter' => 'noauth']);
 $routes->get('logout', 'Users::logout');
 $routes->match(['get','post'],'register', 'Users::register', ['filter' => 'noauth']);
 $routes->match(['get','post'],'profile', 'Users::profile',['filter' => 'auth']);
+$routes->match(['get','post'],'publication', 'PublicationController::publication',['filter' => 'auth']);
+$routes->match(['get','post'],'displayPublication', 'PublicationController::displayVerifiedPublication',['filter' => 'auth']);
 $routes->get('dashboard', 'Dashboard::index',['filter' => 'auth']);
+$routes->match(['get','post'],'userpublication', 'PublicationController::userPublish',['filter' => 'auth']);
+$routes->match(['get','post'],'unverifiedpublication', 'PublicationController::displayUnVerifiedPublication',['filter' => 'authadmin']);
+$routes->match(['get','post'],'publicationGestion', 'PublicationController::publicationGestion',['filter' => 'authadmin']);
+$routes->match(['get','post'],'aprouvePublish', 'PublicationController::aprouvePublish',['filter' => 'authadmin']);
+$routes->match(['get','post'],'deletePublish', 'PublicationController::deletePublish',['filter' => 'authadmin']);
+
 
 /**
  * --------------------------------------------------------------------
